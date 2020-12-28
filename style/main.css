@@ -1,0 +1,16 @@
+#container{
+    background-color: #eeeeee;
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+}
+
+body{
+    background-color: #222831;
+}
+
+h1{
+    color: #393e46;
+    margin: auto;
+    text-align: center;
+}
