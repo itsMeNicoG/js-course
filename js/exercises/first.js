@@ -1,7 +1,7 @@
 import { isString, isNumber } from "./validations.js";
 
 /*
- * Count number of characters in a string
+ *    1) Count number of characters in a string
  */
 
 const countCharacters = (myString) =>
@@ -15,7 +15,7 @@ countCharacters(["Hello", "Darkness", "My", "Old", "Friend"]); //should output e
 countCharacters({ name: "Nico" }); //should output error "The value you provided does not correspond to a text."
 
 /*
- * Cut text to the desired length
+ *    2) Cut text to the desired length
  */
 
 function sliceText(text, newLength) {
@@ -38,7 +38,7 @@ sliceText("Hola mundo", 20); //should throw an error as the new length has to be
 sliceText(1234, 4); //should throw error as the first parameter is not a string
 
 /*
- * Separate string into array of words separated by the character provided
+ *    3) Separate string into array of words separated by the character provided
  */
 
 function splitText(text, separator) {
@@ -55,7 +55,7 @@ splitText("Hello World!", "a"); //will output an array containing a single eleme
 splitText("Hello World!", 1); //will output an error as the separator is not a string
 
 /*
- * Repeat text a certain amount of times
+ *    4) Repeat text a certain amount of times
  */
 
 function repeatText(text, repeatCount) {
