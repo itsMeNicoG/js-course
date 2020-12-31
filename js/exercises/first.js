@@ -1,42 +1,13 @@
-// Method to validate strings and numbers
-
-function isString(str) {
-  try {
-    if (typeof str === "string") {
-      return true;
-    } else {
-      throw new Error("The argument provided is not a string.");
-    }
-  } catch (e) {
-    console.error(e);
-    return false;
-  }
-}
-
-function isNumber(num) {
-    try {
-      if (typeof num === "number") {
-        return true;
-      } else {
-        throw new Error("The argument provided is not a number.");
-      }
-    } catch (e) {
-      console.error(e);
-      return false;
-    }
-  }
+import { isString, isNumber } from "./validations.js";
 
 /*
  * Count number of characters in a string
  */
 
-function countCharacters(myString) {
-  if (isString(myString)) {
-    console.log(
-      `The string "${myString}" has a total amount of ${myString.length} characters.`
-    );
-  }
-}
+const countCharacters = (myString) =>
+  isString(myString)
+    ? console.log(`"${myString}" has ${myString.length} characters.`)
+    : null;
 
 countCharacters("1"); //should output "The string "1" has a total amount of 1 characters."
 countCharacters(1); //should output error "The value you provided does not correspond to a text."
