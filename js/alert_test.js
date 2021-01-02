@@ -8,3 +8,4 @@ console.log(myAlert);
 console.log(myConfirm);
 //prompt will return the content of the text box (null if user clicks cancel)
 console.log(myPrompt);
+console.log("Test")
