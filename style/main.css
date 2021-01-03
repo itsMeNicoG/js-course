@@ -1,16 +1,27 @@
-#container{
-    background-color: #eeeeee;
-    width: 80%;
-    margin: auto;
-    height: 100vh;
+#container {
+  background-color: #dddddd;
+  width: 80%;
+  margin: auto;
+  height: 70vh;
+  padding-top: 300px;
 }
 
-body{
-    background-color: #222831;
+#sub-container {
+  height: 250px;
+  width: 700px;
+  background-color: #30475e;
+  border-radius: 15px;
+  padding-top: 100px;
+  margin-left: 405px;
 }
 
-h1{
-    color: #393e46;
-    margin: auto;
-    text-align: center;
+body {
+  background-color: #222831;
+}
+
+h1 {
+  color: #f05454;
+  text-align: right;
+  font-family: 'Bebas Neue', cursive;
+  margin-right: 50px;
 }
