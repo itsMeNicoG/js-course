@@ -18,7 +18,7 @@ export function isNumber(num) {
     if (typeof num === "number") {
       return true;
     } else {
-      throw new Error(`${num} is not a string.`);
+      throw new Error(`${num} is not a number.`);
     }
   } catch (e) {
     console.error(e);
