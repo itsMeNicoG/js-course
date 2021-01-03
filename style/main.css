@@ -1,8 +1,34 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #274058;
+}
+
+li {
+  float: left;
+  font-family: 'Open Sans', sans-serif;
+}
+
+li a {
+  display: block;
+  color: rgb(189, 189, 189);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #213a52;
+  color: rgb(255, 255, 255);
+}
+
 #container {
   background-color: #dddddd;
   width: 80%;
   margin: auto;
-  height: 70vh;
+  height: 64vh;
   padding-top: 300px;
 }
 
@@ -17,6 +43,7 @@
 
 body {
   background-color: #222831;
+  margin: 0;
 }
 
 h1 {
