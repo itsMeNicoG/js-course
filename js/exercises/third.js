@@ -15,15 +15,11 @@ console.log(getRandomNumber());
  *    10) function to evaluate if a number is palindrome
  */
 
-const isPalindrome = (number) => {
-  if (!number)
-    return console.warn("The function requires a number as argument.");
-  isNaN(number)
-    ? console.warn("You did not enter a valid number.")
-    : number.toString() === number.toString().split("").reverse().join("")
+const isPalindrome = (number = NaN) => isNaN(parseFloat(number))
+  ? console.warn("You did not enter a valid number.")
+  : number.toString() === number.toString().split("").reverse().join("")
     ? console.log(`${number} is definitely palindrome.`)
     : console.log(`${number} is definitely not palindrome.`);
-};
 
 isPalindrome(1234567);
 isPalindrome(24242);
@@ -38,8 +34,8 @@ isPalindrome();
  *    11) calculate factorial of a number
  */
 
-const calculateFactorial = (number) => {
-  if (isNaN(number))
+const calculateFactorial = (number) => {.
+  if (isNaN(parseInt(number)))
     return console.warn(
       "You need to enter a number greater than or equal to 1."
     );

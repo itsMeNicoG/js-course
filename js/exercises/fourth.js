@@ -3,7 +3,7 @@
  */
 
 const isPrime = (number=NaN) => {
-  if (isNaN(number)) return console.warn("You must enter a number.");
+  if (isNaN(parseInt(number))) return console.warn("You must enter a number.");
   if (!Number.isInteger(number)) return console.warn("The number must be an integer.");
   if (Math.sign(number) !== 1) return console.warn("The number must be positive.");
   if (number === 1) return console.log("1 is not prime.");
@@ -50,8 +50,7 @@ isPrime("");
  */
 
 const isEven = (number=NaN) => {
-  if (isNaN(number)) return console.warn("You must enter a number.");
-  if (!number) return console.warn("You must enter a number.");
+  if (isNaN(parseInt(number))) return console.warn("You must enter a number.");
   number % 2 === 0
     ? console.log(`The number ${number} is even.`)
     : console.log(`The number ${number} is not even.`);
@@ -68,8 +67,8 @@ isEven("");
  *    14) Convert Farenheit to Celsius
  */
 
-const toCelsius = (farenheit="") => {
-  if (typeof farenheit !== "number") return console.warn("You must enter a number.");
+const toCelsius = (farenheit = NaN) => {
+  if (isNaN(parseInt(farenheit))) return console.warn("You must enter a number.");
   let celsius = Math.round((farenheit - 32) * (5/9));
   console.log(`${farenheit}°F is the same as ${celsius}°C.`);
 }

@@ -4,16 +4,10 @@ import { isString, isNumber } from "./validations.js";
  *    5) Invert characters in a string
  */
 
-function invertString(str = "") {
-  if (isString(str)) {
-    //we separe the string into an array of characters to take advantage of the Array's reverse method
-    const stringArray = str.split("");
-    stringArray.reverse();
-    str = stringArray.join("");
-    console.log(str);
-    return str;
-  }
-}
+const invertString = (str = "") =>
+  isString(str)
+    ? str.split("").reverse().join("")
+    : new Error("You did not enter a valid string.");
 
 /*
  *    6) Count number of times a word appears in a string
@@ -47,8 +41,8 @@ const removePattern = (text = "", pattern = "") =>
 
 /////////////////////////////// END OF FUNCTIONS /////////////////////////////////
 
-invertString("Hello World!"); //should output "!dlroW olleH"
-invertString(1234); //should throw an error as the argument is not a string
+console.log(invertString("Hello World!")); //should output "!dlroW olleH"
+console.log(invertString(1234)); //should throw an error as the argument is not a string
 countWords("hola mundo adios mundo", "mundo"); //should otput 2
 countWords("hola mundo adios mundo", 2); //should throw an error as both arguments need to be strings
 isPalindrome("salas"); //should output "The word "salas" is palindrome"
