@@ -34,7 +34,7 @@ isPalindrome();
  *    11) calculate factorial of a number
  */
 
-const calculateFactorial = (number) => {.
+const calculateFactorial = (number) => {
   if (isNaN(parseInt(number)))
     return console.warn(
       "You need to enter a number greater than or equal to 1."
