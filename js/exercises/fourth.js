@@ -67,15 +67,32 @@ isEven("");
  *    14) Convert Farenheit to Celsius
  */
 
-const toCelsius = (farenheit = NaN) => {
-  if (isNaN(parseInt(farenheit))) return console.warn("You must enter a number.");
-  let celsius = Math.round((farenheit - 32) * (5/9));
-  console.log(`${farenheit}°F is the same as ${celsius}°C.`);
+const toCelsiusOrFarenheit = (degrees = NaN, to = "") => {
+  if (isNaN(parseFloat(degrees))) return console.warn("The source temperature must be a number.");
+  if(!to) return console.warn("You must specify the conversion target (celsius or farenheit).");
+  if (typeof to !== "string") return console.warn("The conversion target must be a string.")
+    
+  switch(to){
+    case 'c':
+      let celsius = Math.round((degrees - 32) * (5/9));
+      console.log(`${degrees}°F is the same as ${celsius}°C.`);
+      break;
+    case 'f':
+      let farenheit = Math.round((degrees * (9/5)) + 32);
+      console.log(`${degrees}°C is the same as ${farenheit}°F.`);
+      break;
+    default:
+      console.log(`Only 'c' and 'f' are valid options.`);
+      break;
+    }
+  
 }
 
-toCelsius(32);
-toCelsius("Nico");
-toCelsius(150);
-toCelsius("");
-toCelsius(250);
-toCelsius();
+toCelsiusOrFarenheit(32, 'f');
+toCelsiusOrFarenheit("Nico");
+toCelsiusOrFarenheit(150, 'c');
+toCelsiusOrFarenheit("");
+toCelsiusOrFarenheit(250, 'c');
+toCelsiusOrFarenheit();
+toCelsiusOrFarenheit(350, 10);
+toCelsiusOrFarenheit(350, 'n');
