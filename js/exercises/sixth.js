@@ -6,8 +6,8 @@ const countVowelsAndConsonants = (text = "") => {
   if (typeof text !== "string")
     return console.warn("The text needs to be a string.");
   if (!text) return console.warn("The text can't be empty.");
-  const vowelRegEx = /[aeiou]/gi;
-  const consonantRegEx = /[bcdfghjklmnpqrstvwxyz]/gi;
+  const vowelRegEx = /[aeiouüáéíóú]/gi;
+  const consonantRegEx = /[bcdfghjklmnñpqrstvwxyz]/gi;
   const vowelMatches = text.match(vowelRegEx);
   const consonantMatches = text.match(consonantRegEx);
   if (!vowelMatches) return console.warn("The text does not contain any vowels.");
@@ -20,7 +20,7 @@ const countVowelsAndConsonants = (text = "") => {
 const testWords = [
   "Freeman Quinto",
   "Johnny Gust",
-  "Nico Rios",
+  "Nicó Rios",
   "Clair Hobbs",
   "NotAValidName",
   "Also.not valid",
@@ -37,7 +37,7 @@ console.groupEnd();
 /*
  *    19) Validate if a text is a valid name
  */
-let nameRegEx = /^[a-z]+ [a-z]+( [a-z]+)*/i;
+let nameRegEx = /^[a-züáéíóú]+ [a-züáéíóú]+( [a-züáéíóú]+)*/i;
 
 const validateName = (name) =>
   typeof name !== "string"
@@ -50,6 +50,7 @@ const testNames = [
   "Freeman Quinto",
   "Johnny Gust",
   "Nico Rios",
+  "Nicolás Góngora",
   "Clair Hobbs",
   "NotAValidName",
   "Also.not valid",
