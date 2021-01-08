@@ -30,15 +30,20 @@ li a:hover {
   margin: auto;
   height: 64vh;
   padding-top: 300px;
+  display:flex;
+  align-items: center;
+  flex-flow: column;
 }
 
 #sub-container {
-  height: 250px;
-  width: 700px;
+  height: 35%;
+  width: 50%;
   background-color: #30475e;
   border-radius: 15px;
-  padding-top: 100px;
-  margin-left: 405px;
+  padding: 5%;
+  display:flex;
+  align-items: center;
+  flex-flow: column;
 }
 
 body {
@@ -50,5 +55,11 @@ h1 {
   color: #f05454;
   text-align: right;
   font-family: "Bebas Neue", cursive;
-  margin-right: 50px;
+  font-size: 2vw;
+}
+
+input {
+  border-radius: 5px;
+  width: 20%;
+  height: 25%;
 }

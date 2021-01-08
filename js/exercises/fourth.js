@@ -17,7 +17,7 @@ const isPrime = (number=NaN) => {
       console.log(`${number} is not divisible by ${i}.`);
     }
   }
-  prime
+  return prime
     ? console.log(`The number ${number} is prime.`)
     : console.log(`The number ${number} is not prime.`);
 }
@@ -51,7 +51,7 @@ isPrime("");
 
 const isEven = (number=NaN) => {
   if (isNaN(parseInt(number))) return console.warn("You must enter a number.");
-  number % 2 === 0
+  return number % 2 === 0
     ? console.log(`The number ${number} is even.`)
     : console.log(`The number ${number} is not even.`);
 }
