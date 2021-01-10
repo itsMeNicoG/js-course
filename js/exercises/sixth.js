@@ -37,9 +37,9 @@ console.groupEnd();
 /*
  *    19) Validate if a text is a valid name
  */
-let nameRegEx = /^[a-züáéíóú]+ [a-züáéíóú]+( [a-züáéíóú]+)*/i;
+let nameRegEx = /^[a-züáéíóú]+ [a-züáéíóú]+( [a-züáéíóú]+)*$/i;
 
-const validateName = (name) =>
+const validateName = (name = "") =>
   typeof name !== "string"
     ? console.warn("The name must be a string.")
     : nameRegEx.test(name)
