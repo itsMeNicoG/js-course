@@ -21,14 +21,6 @@ class Movie {
     this.validateScore(score);
   }
 
-  validateString(str, fieldName) {
-    if (!str) 
-      return console.warn(`You must provide a valid ${fieldName}.`);
-    if (typeof str !== "string")
-      return console.warn(`The ${fieldName} "${str}" provided is not valid.`);
-    return true;
-  }
-
   static get acceptedGenres() {
     return [
       "Action",
@@ -61,23 +53,32 @@ class Movie {
       "Western",
     ];
   }
+  
+  validateString(str, fieldName) {
+    if (!str) 
+      return console.warn(`You must provide a valid ${fieldName}.`);
+    if (typeof str !== "string")
+      return console.warn(`The ${fieldName} "${str}" provided is not valid.`);
+    return true;
+  }
 
   validateId(id = undefined) {
-    this.validateString(id, "IMDB id")
-      ? id.length !== 9
-        ? console.warn("The ID must be 9 characters long.")
+    !this.validateString(id, "IMDB id")
+      ? console.warn("ID validation unsuccessful.")
+      //: id.length !== 9
+        //? console.warn("The ID must be 9 characters long.")
         : /^[a-z]{2}\d{7}$/gi.test(id)
-        ? (this.id = id)
-        : console.warn(`The IMDB id "${id}" doesn't have the correct format.`)
-      : console.warn("ID validation unsuccessful.");
+          ? (this.id = id)
+          : console.warn(`The IMDB id "${id}" doesn't have the correct format.`)
+      
   }
 
   validateTitle(title = undefined) {
-    this.validateString(title, "title")
-      ? title.length > 100
+    !this.validateString(title, "title")
+      ? console.warn("Title validation unsuccessful.")
+      : title.length > 100
         ? console.warn("The title must be less than 100 characters long.")
         : this.title = title
-      : console.warn("Title validation unsuccessful.");
   }
 
   validateDirector(director = undefined) {
@@ -152,6 +153,7 @@ class Movie {
     `)
   }
 
+  //will receive an array of objects and create a Movie object from each element in the array
   static createInstances(objects) {
     if(objects.length < 1) 
       return console.warn("The array you provided is empty.");
@@ -181,7 +183,7 @@ let myMovie = new Movie(testObject);
 myMovie.printMovieData();
 
 testObject = {
-  id: "IMM234567",
+  id: "IM234567",
   title: "",
   director: "Nico",
   year: 2019,
@@ -224,3 +226,5 @@ let [first, second, third] = Movie.createInstances(moviesArray);
 first.printMovieData();
 second.printMovieData();
 third.printMovieData();
+
+console.log(Movie.acceptedGenres);
