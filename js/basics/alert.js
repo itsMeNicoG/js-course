@@ -1,4 +1,3 @@
-console.log(window);
 let myAlert = alert("Alert Message!");
 let myConfirm = confirm("Confirmation Message");
 let myPrompt = prompt("Name: ");
