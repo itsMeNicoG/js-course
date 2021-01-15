@@ -21,12 +21,19 @@ const jsonString = '{"string":"Nico","number":"35","boolean":"true","array":"[]"
 console.log(jsonString);
 console.log(JSON.parse(jsonString));
 
+let myJson;
 
+//get json data from API and print character names
 async function getJSON() {
-  let jsondata = await fetch("https://breakingbadapi.com/api/characters");
-  return jsondata.json();
+  let jsondata = await fetch("https://breakingbadapi.com/api/characters").then(json => json.json()).then(data => myjson = data);
+  console.log(jsondata);
+  myJson = jsondata;
+  for (let character of myJson) {
+    console.log("Current character:" );
+    console.log(character.name);
+  }
 }
 
-let myJson = await getJSON();
-console.log(myJson);
+getJSON();
+
 
