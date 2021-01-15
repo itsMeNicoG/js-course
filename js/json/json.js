@@ -21,9 +21,12 @@ const jsonString = '{"string":"Nico","number":"35","boolean":"true","array":"[]"
 console.log(jsonString);
 console.log(JSON.parse(jsonString));
 
-// we can read a json file using fetch like this: 
-function testReadFile(url){
-  fetch(url).then(response => response.json()).then(data => console.log(data));
+
+async function getJSON() {
+  let jsondata = await fetch("https://breakingbadapi.com/api/characters");
+  return jsondata.json();
 }
 
-testReadFile("./js/json/file.json");
+let myJson = await getJSON();
+console.log(myJson);
+
