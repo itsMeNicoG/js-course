@@ -8,16 +8,46 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png?">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="style/main.css" />
+    <style>
+      :root {
+        --yellow-color: #F7DF1E;
+        --dark-color: #000;
+      }
+      .cards{
+        display: flex;
+        background-color: var(--dark-color);
+        color: var(--yellow-color);
+      }
+      
+      .card-figcaption {
+        padding: 1rem;
+      }
+      
+      .rotate-45 {
+        transform: rotate(45deg);
+      }
+      
+      .rotate-135 {
+        transform: rotate(135deg);
+      }
+      
+      .opacity-80 {
+        opacity: .8;
+      }
+      
+      .sepia {
+        filter: sepia(1);
+      }
+    </style>
   </head>
   <body>
     <ul>
       <li><a href="./index.html">Home</a></li>
       <li><a href="./exercises.html">Exercises</a></li>
-      <li><a href="./dom.html" data-description="Document Object Model" class="dom-link">DOM</a></li>
+      <li><a href="./dom.html" >DOM</a></li>
     </ul>
     <div id="container">
       <br>
-      <hr>
       <br>
       <h3>DOM Management</h3>
       <p id="what-is"></p>
@@ -31,7 +61,7 @@
         </ul>
       </nav>
       <input type="text" name="name" placeholder="Name">
-      <a class="" href="#">DOM</a>
+      <a class="dom-link" href="#" style="color:black", data-description="Document Object Model">DOM</a>
       <section class="cards">
          <figure class="card">
            <img src="http://placeimg.com/200/200/animals" alt="Animals">
@@ -55,6 +85,6 @@
         </figure>
       </section>
     </div>
-    <script src="js/dom/attributes.js" type="module"></script>
+    <script src="js/dom/traversing.js" type="module"></script>
   </body>
 </html>
