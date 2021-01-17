@@ -1,3 +1,7 @@
+html, body {
+  height:100%;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -28,7 +32,7 @@ li a:hover {
   background-color: #dddddd;
   width: 80%;
   margin: auto;
-  height: 64vh;
+  height: 100%;
   padding-top: 300px;
   display:flex;
   align-items: center;
@@ -62,4 +66,8 @@ input {
   border-radius: 5px;
   width: 20%;
   height: 25%;
+}
+
+.cards{
+  display: flex;
 }
