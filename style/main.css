@@ -1,5 +1,11 @@
-html, body {
-  height:100%;
+:root {
+  --yellow-color: #f7df1e;
+  --dark-color: #000;
+}
+
+html,
+body {
+  height: 100%;
   scroll-behavior: smooth;
 }
 
@@ -35,7 +41,7 @@ li a:hover {
   margin: auto;
   height: 100%;
   padding-top: 300px;
-  display:flex;
+  display: flex;
   align-items: center;
   flex-flow: column;
 }
@@ -46,7 +52,7 @@ li a:hover {
   background-color: #30475e;
   border-radius: 15px;
   padding: 5%;
-  display:flex;
+  display: flex;
   align-items: center;
   flex-flow: column;
 }
@@ -69,3 +75,35 @@ input {
   height: 25%;
 }
 
+.cards {
+  margin-top: 1rem;
+  display: flex;
+  border: thin solid var(--dark-color);
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.card-figcaption {
+  padding: 1rem;
+}
+
+.rotate-45 {
+  transform: rotate(45deg);
+}
+
+.rotate-135 {
+  transform: rotate(135deg);
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.sepia {
+  filter: sepia(1);
+}
+
+.card {
+  background-color: var(--dark-color);
+  color: var(--yellow-color);
+}

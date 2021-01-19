@@ -9,35 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="style/main.css" />
     <style>
-      :root {
-        --yellow-color: #F7DF1E;
-        --dark-color: #000;
-      }
-      .cards{
-        display: flex;
-        background-color: var(--dark-color);
-        color: var(--yellow-color);
-      }
       
-      .card-figcaption {
-        padding: 1rem;
-      }
-      
-      .rotate-45 {
-        transform: rotate(45deg);
-      }
-      
-      .rotate-135 {
-        transform: rotate(135deg);
-      }
-      
-      .opacity-80 {
-        opacity: .8;
-      }
-      
-      .sepia {
-        filter: sepia(1);
-      }
     </style>
   </head>
   <body>
@@ -84,7 +56,13 @@
           <figcaption>People</figcaption>
         </figure>
       </section>
+      <template id="template-card">
+        <figure class="card">
+        <img>
+        <figcaption></figcaption>
+        </figure>
+      </template>
     </div>
-    <script src="js/dom/traversing.js" type="module"></script>
+    <script src="js/dom/modifying_elements.js" type="module"></script>
   </body>
 </html>
