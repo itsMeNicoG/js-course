@@ -7,7 +7,7 @@ This repository consist on a series of exercises and tests that I've been workin
 ```git
 git clone https://github.com/itsMeNicoG/js-course
 ```
-Make sure you edit the index.html or exercises.html and link it to the corresponding JS file as I decided to keep just these two HTML files.
+Make sure you edit the corresponding HTML file and include the desired JS Script route.
 
 ## Contact
 
