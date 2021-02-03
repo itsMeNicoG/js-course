@@ -6,15 +6,18 @@
     <title>Document</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png?">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="style/dom-exercises.css" />
+    <link rel="stylesheet" href="style/hamburger-menu.css" />
+    <link rel="stylesheet" href="style/clock.css" />
   </head>
   <body>
     <header>
       <h1>DOM</h1>
       <nav id="hamburger-menu" class="closed">
         <ul>
-          <li><a href="#section-1">Section 1</a></li>
+          <li><a href="#clock-section">Digital Clock</a></li>
           <li><a href="#section-2">Section 2</a></li>
           <li><a href="#section-3">Section 3</a></li>
           <li><a href="#section-4">Section 4</a></li>
@@ -26,18 +29,23 @@
         <span class="hamburger-inner"></span>
       </span>
     </button>
-    <section id="section-1">
-      <h1>Section 1</h1>
-    </section>
-    <section id="section-2">
-      <h1>Section 2</h1>
-    </section>
-    <section id="section-3">
-      <h1>Section 3</h1>
-    </section>
-    <section id="section-4">
-      <h1>Section 4</h1>
-    </section>
+    <main>
+      <section id="clock-section">
+        <h1>Digital Clock</h1>
+        <div id="clock">
+          <p id="current-time"></p>  
+        </div>
+      </section>
+      <section id="section-2">
+        <h1>Section 2</h1>
+      </section>
+      <section id="section-3">
+        <h1>Section 3</h1>
+      </section>
+      <section id="section-4">
+        <h1>Section 4</h1>
+      </section>
+    </main>
     <script src="js/dom-exercises/modules.js" type="module"></script>
   </body>
 </html>
