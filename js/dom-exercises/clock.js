@@ -1,6 +1,6 @@
 const clock = () => {
   const clock = document.getElementById("current-time");
-  clock.innerHTML = new Date().toLocaleTimeString();
+  clock.innerHTML = new Date().toLocaleTimeString().toUpperCase();
 };
 
 const createClock = () => setInterval(clock, 1000);
