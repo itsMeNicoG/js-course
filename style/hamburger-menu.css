@@ -1,8 +1,9 @@
 #hamburger-menu {
   position: fixed;
   display: flex;
+  flex-direction: column;
   font-size: 0;
-  align-items: center;
+  justify-content: center;
   top: 100vh;
   left: 100vw;
   width: 100%;
@@ -19,36 +20,37 @@
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100%;
+  height: 100%;
   font-size: 2rem;
   opacity: 1;
 }
 
 #hamburger-menu ul {
-  display: block;
   list-style: none;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   padding: 0;
   width: 100%;
   color: var(--text);
 }
 
 #hamburger-menu ul li {
-  padding: 2rem;
-  color: black;
-}
-
-#hamburger-menu ul li:hover {
-  background-color: #0b2724;
   color: black;
 }
 
 #hamburger-menu a {
   text-decoration: none;
   color: var(--text);
+  display: block;
+  width: inherit;
+  height: inherit;
+  padding: 2rem;
 }
 
+#hamburger-menu a:hover {
+  background-color: var(--text);
+  color: var(--background);
+}
 .hamburger {
   padding: 15px 15px;
   display: inline-block;
