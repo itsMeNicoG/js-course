@@ -35,7 +35,8 @@ h1 {
 
 section h1 {
   font-family: Verdana, sans-serif;
-  margin: 5vh auto;
+  margin-bottom: 4vh;
+  margin-top: 6vh;
 }
 
 section {

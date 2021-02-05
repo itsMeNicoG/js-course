@@ -36,11 +36,12 @@
 
 #hamburger-menu ul li {
   padding: 2rem;
+  color: black;
 }
 
 #hamburger-menu ul li:hover {
-  background-color: #184d47ad;
-  color: var(--background);
+  background-color: #0b2724;
+  color: black;
 }
 
 #hamburger-menu a {

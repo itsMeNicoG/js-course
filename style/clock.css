@@ -1,9 +1,18 @@
+@font-face {
+  font-family: clock-font;
+  src: url(fonts/clock.ttf);
+}
+
 #clock-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #d6efc7;
   color: #184d47;
+}
+
+#clock-section h1 {
+  font-family: "clock-font", monospace;
 }
 .clock {
   display: flex;
@@ -15,12 +24,11 @@
   flex-wrap: wrap;
   padding: 2rem;
   width: fit-content;
-  flex-shrink: 1;
   margin: 5vh auto;
 }
 
 .clock p {
-  font-family: "Share Tech Mono", monospace;
+  font-family: "clock-font", monospace;
   color: rgb(45, 175, 67);
   font-size: 5vw;
   margin: 0;
