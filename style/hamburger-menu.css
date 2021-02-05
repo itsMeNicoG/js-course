@@ -30,6 +30,8 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0;
+  width: 100%;
+  color: var(--text);
 }
 
 #hamburger-menu ul li {
@@ -37,7 +39,8 @@
 }
 
 #hamburger-menu ul li:hover {
-  background-color: var(--text);
+  background-color: #184d47ad;
+  color: var(--background);
 }
 
 #hamburger-menu a {

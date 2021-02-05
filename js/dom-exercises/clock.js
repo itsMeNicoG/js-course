@@ -1,4 +1,12 @@
-const options = {
+const currentLocationOptions = {
+  hour12: false,
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+};
+
+const utcOptions = {
+  timeZone: "Etc/GMT",
   hour12: false,
   hour: "2-digit",
   minute: "2-digit",
@@ -6,10 +14,14 @@ const options = {
 };
 
 const clock = () => {
+  const currentDate = new Date();
   const clock = document.querySelector(".current-time");
-  clock.innerHTML = new Date().toLocaleTimeString("en-US", options);
+  clock.innerHTML = currentDate.toLocaleTimeString(
+    "en-US",
+    currentLocationOptions
+  );
   const utcClock = document.querySelector(".utc-time");
-  utcClock.innerHTML = new Date().toLocaleTimeString("UTC", options);
+  utcClock.innerHTML = currentDate.toLocaleTimeString("en-US", utcOptions);
 };
 
 const createClock = () => {
