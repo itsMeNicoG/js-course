@@ -10,6 +10,9 @@ const clock = () => {
   clock.innerHTML = new Date().toLocaleTimeString("en-US", options);
 };
 
-const createClock = () => setInterval(clock, 1000);
+const createClock = () => {
+  clock();
+  setInterval(clock, 1000);
+};
 
 export default createClock;

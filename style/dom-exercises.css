@@ -9,29 +9,37 @@ body {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  background-color: #aaaaaa;
   box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
 }
 
 header {
   background-color: var(--background);
   padding: 1rem;
   font-family: "Share Tech Mono", monospace;
+  position: sticky;
+  top: 0;
+  color: var(--text);
 }
 
 h1 {
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  color: var(--text);
-  margin: auto;
 }
 
 section h1 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  color: var(--text);
   font-family: Verdana, sans-serif;
+  margin-bottom: 5vh;
 }
 
 section {
   display: flex;
+  min-height: 100vh;
+  padding: 1rem;
 }
