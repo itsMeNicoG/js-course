@@ -5,7 +5,7 @@
   background-color: #d6efc7;
   color: #184d47;
 }
-#clock {
+.clock {
   display: flex;
   background-color: #184d47;
   align-items: center;
@@ -16,26 +16,27 @@
   padding: 2rem;
   width: fit-content;
   flex-shrink: 1;
+  margin: 5vh auto;
 }
 
-#clock p {
+.clock p {
   font-family: "Share Tech Mono", monospace;
   color: rgb(45, 175, 67);
   font-size: 5vw;
   margin: 0;
 }
 
-#timezone {
+.clock .timezone {
   align-self: flex-start;
   font-size: 2vw;
 }
 
 @media screen and (max-width: 1000px) {
-  #clock p {
+  .clock p {
     font-size: 10vw;
   }
 
-  #timezone {
+  .clock .timezone {
     font-size: 5vw;
   }
 }

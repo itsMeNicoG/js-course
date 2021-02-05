@@ -6,8 +6,10 @@ const options = {
 };
 
 const clock = () => {
-  const clock = document.getElementById("current-time");
+  const clock = document.querySelector(".current-time");
   clock.innerHTML = new Date().toLocaleTimeString("en-US", options);
+  const utcClock = document.querySelector(".utc-time");
+  utcClock.innerHTML = new Date().toLocaleTimeString("UTC", options);
 };
 
 const createClock = () => {
