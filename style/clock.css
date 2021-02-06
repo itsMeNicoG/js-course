@@ -67,8 +67,9 @@
   color: rgb(45, 175, 67);
   outline: none;
   cursor: pointer;
-  display: table-cell;
-  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .clock .clock-button:hover {
