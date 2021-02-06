@@ -13,9 +13,13 @@
     <link rel="stylesheet" href="style/clock.css" />
   </head>
   <body>
+    <audio id="alarm-sound">
+      <source src="../audio/clock-alarm.mp3">
+      Your browser does not support the audio element.
+    </audio>
     <header>
       <h1>DOM</h1>
-      <nav id="hamburger-menu" class="closed">
+      <nav id="hamburger-menu">
         <ul>
           <li><a href="#clock-section">Digital Clock</a></li>
           <li><a href="#section-2">Section 2</a></li>
@@ -35,10 +39,18 @@
         <div class="clock">
           <p class="timezone">Bogotá: </p> 
           <p class="current-time"></p>  
+          <div class="clock-functions">
+            <button type="button" class="clock-button clock-status">Stop Clock</button>
+            <button type="button" class="clock-button alarm-status">Start Alarm</button>
+          </div>
         </div>
         <div class="clock">
           <p class="timezone">UTC: </p> 
           <p class="current-time utc-time"></p>  
+          <div class="clock-functions">
+            <button type="button" class="clock-button clock-status">Stop Clock</button>
+            <button type="button" class="clock-button alarm-status">Start Alarm</button>
+          </div>
         </div>
       </section>
       <section id="section-2">

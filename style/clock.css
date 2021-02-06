@@ -9,6 +9,7 @@
   align-items: center;
   background-color: #d6efc7;
   color: #184d47;
+  margin-top: 0;
 }
 
 #clock-section h1 {
@@ -23,8 +24,9 @@
   border-radius: 5px;
   flex-wrap: wrap;
   padding: 2rem;
+  padding-bottom: 0;
   width: fit-content;
-  margin: 5vh auto;
+  margin: 4vh auto;
 }
 
 .clock p {
@@ -47,4 +49,26 @@
   .clock .timezone {
     font-size: 5vw;
   }
+}
+.clock .clock-functions {
+  display: flex;
+  width: 100%;
+  height: 2vh;
+  justify-content: center;
+  height: fit-content;
+}
+
+.clock .clock-button {
+  flex: 1 1 auto;
+  padding: 1rem;
+  font-family: "clock-font", monospace;
+  background-color: #184d47;
+  color: rgb(45, 175, 67);
+  outline: none;
+  cursor: pointer;
+  border: thick solid #184d47;
+}
+
+.clock .clock-button:hover {
+  border: thick solid rgb(45, 175, 67);
 }
