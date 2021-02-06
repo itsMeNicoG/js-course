@@ -24,7 +24,7 @@
   border-radius: 5px;
   flex-wrap: wrap;
   padding: 2rem;
-  padding-bottom: 0;
+  /* padding-bottom: 0; */
   width: fit-content;
   margin: 4vh auto;
 }
@@ -50,6 +50,7 @@
     font-size: 5vw;
   }
 }
+
 .clock .clock-functions {
   display: flex;
   width: 100%;
@@ -66,9 +67,13 @@
   color: rgb(45, 175, 67);
   outline: none;
   cursor: pointer;
-  border: thick solid #184d47;
 }
 
 .clock .clock-button:hover {
-  border: thick solid rgb(45, 175, 67);
+  background: rgb(45, 175, 67);
+  color: #184d47;
+}
+
+.stopped {
+  display: none;
 }

@@ -16,32 +16,36 @@ const utcOptions = {
 const createClock = ($clock, options) => {
   const currentDate = new Date();
   $clock.innerHTML = currentDate.toLocaleTimeString("en-US", options);
-  const interval = setInterval(() => {
+  setInterval(() => {
     const currentDate = new Date();
     $clock.innerHTML = currentDate.toLocaleTimeString("en-US", options);
   });
-  return interval;
 };
 
 const runClock = ($clock, $utcClock, $clockBtn, $utcClockBtn) => {
-  const currentClock = createClock($clock, currentLocationOptions);
-  const utcClock = createClock($utcClock, utcOptions);
+  createClock($clock, currentLocationOptions);
+  createClock($utcClock, utcOptions);
   $clockBtn.addEventListener("click", (e) =>
-    changeClockStatus($clock, currentLocationOptions, $clockBtn, currentClock)
+    changeClockStatus($clock, $clockBtn)
   );
   $utcClockBtn.addEventListener("click", (e) =>
-    changeClockStatus($utcClock, utcOptions, $utcClockBtn, utcClock)
+    changeClockStatus($utcClock, $utcClockBtn)
   );
 };
 
-function changeClockStatus($clock, options, $clockBtn, interval) {
+function changeClockStatus($clock, $clockBtn) {
+  let $stopText = document.createElement("p");
+  $stopText.appendChild(document.createTextNode("STOPPED"));
   if ($clockBtn.innerHTML === "Stop Clock") {
-    clearInterval(interval);
     $clockBtn.innerHTML = "Start Clock";
+    $clock.style.display = "none";
+    $clock.insertAdjacentElement("beforebegin", $stopText);
   } else {
-    createClock($clock, options);
     $clockBtn.innerHTML = "Stop Clock";
+    $clock.style.display = "block";
+    $clock.previousElementSibling.remove();
   }
+  return interval;
 }
 
 export function changeAlarmStatus($alarmBtn, $audio) {
