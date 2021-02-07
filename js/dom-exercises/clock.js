@@ -56,6 +56,7 @@ export function changeAlarmStatus($alarmBtn, $audio) {
     } else {
       $audio.pause();
       $alarmBtn.innerHTML = "Start Alarm";
+      $audio.currentTime = 0;
     }
   });
 }
