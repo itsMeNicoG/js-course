@@ -1,5 +1,7 @@
 import createHamburgerMenu from "./hamburger.js";
 import createClock, { changeAlarmStatus } from "./clock.js";
+import drawCanvas from "./keyboard-events.js";
+import createScrollButton from "./scroll.js";
 
 const d = document;
 
@@ -18,4 +20,6 @@ d.addEventListener("DOMContentLoaded", (e) => {
   for (let alarmBtn of document.querySelectorAll(".alarm-status")) {
     changeAlarmStatus(alarmBtn, document.getElementById("alarm-sound"));
   }
+  drawCanvas("#drawing-canvas");
+  createScrollButton(".scroll");
 });

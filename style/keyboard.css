@@ -1,0 +1,42 @@
+:root {
+  --keyboard-bg: rgb(226, 245, 255);
+  --keyboard-text: rgb(0, 41, 70);
+}
+
+#keyboard-events {
+  color: var(--keyboard-text);
+  background-color: var(--keyboard-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#keyboard-events h1 {
+  font-family: "Share Tech Mono", monospace;
+}
+
+#not-desktop {
+  display: none;
+}
+
+#drawing-canvas {
+  background-color: var(--keyboard-text);
+  border-radius: 15px;
+  /* box-shadow: 1px 0px 38px 11px rgba(0, 0, 0, 0.51) inset; */
+  background: linear-gradient(225deg, #cbdde6, #f2ffff);
+  box-shadow: -20px 20px 60px #c0d0d9, 20px -20px 60px #ffffff;
+  margin-top: 5vh;
+}
+
+@media screen and (max-width: 1100px) {
+  #instructions {
+    display: none;
+  }
+  #drawing-canvas {
+    display: none;
+  }
+  #not-desktop {
+    display: block;
+  }
+}

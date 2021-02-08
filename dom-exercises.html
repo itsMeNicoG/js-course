@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style/dom-exercises.css" />
     <link rel="stylesheet" href="style/hamburger-menu.css" />
     <link rel="stylesheet" href="style/clock.css" />
+    <link rel="stylesheet" href="style/keyboard.css" />
+    <link rel="stylesheet" href="style/scroll.css" />
   </head>
   <body>
     <audio id="alarm-sound">
@@ -22,7 +24,7 @@
       <nav id="hamburger-menu">
         <ul>
           <li><a href="#clock-section">Digital Clock</a></li>
-          <li><a href="#section-2">Section 2</a></li>
+          <li><a href="#keyboard-events">Keyboard Events</a></li>
           <li><a href="#section-3">Section 3</a></li>
           <li><a href="#section-4">Section 4</a></li>
         </ul>
@@ -33,15 +35,17 @@
         <span class="hamburger-inner"></span>
       </span>
     </button>
+    <div class="scroll disabled">
+      <a href="#clock-section"><img src="./img/scrollicon.svg"/></a>
+    </div>
     <main>
       <section id="clock-section">
-        <h1>Digital Clock</h1>
         <div class="clock">
           <p class="timezone">Bogotá: </p> 
           <p class="current-time"></p>
           <div class="clock-functions">
             <button type="button" class="clock-button clock-status">Stop Clock</button>
-            <button type="button" class="clock-button alarm-status">Start Alarm</button>
+            <button type="button" class="clock-button alarm-status">Play Alarm</button>
           </div>
         </div>
         <div class="clock">
@@ -49,12 +53,14 @@
           <p class="current-time utc-time"></p>  
           <div class="clock-functions">
             <button type="button" class="clock-button clock-status">Stop Clock</button>
-            <button type="button" class="clock-button alarm-status">Start Alarm</button>
+            <button type="button" class="clock-button alarm-status">Play Alarm</button>
           </div>
         </div>
       </section>
-      <section id="section-2">
-        <h1>Section 2</h1>
+      <section id="keyboard-events">
+        <h1 id="instructions">Click the playground below and use your arrows to move:</h1>
+        <h1 id="not-desktop">This part is not supported on your device, you need to use fullscreen and have a physical keyboard.</h1>
+        <canvas id="drawing-canvas" width="1000px" height="500px"></canvas>
       </section>
       <section id="section-3">
         <h1>Section 3</h1>

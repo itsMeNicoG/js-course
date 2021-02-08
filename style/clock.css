@@ -7,17 +7,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #d6efc7;
-  color: #184d47;
+  justify-content: center;
+  background-color: var(--background);
   margin-top: 0;
 }
 
-#clock-section h1 {
-  font-family: "clock-font", monospace;
-}
 .clock {
   display: flex;
-  background-color: #184d47;
+  background-color: var(--text);
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -26,11 +23,12 @@
   padding: 5vh;
   width: fit-content;
   margin: 4vh auto;
+  box-shadow: 0px 0px 6px 2px rgba(224, 247, 250, 0.5);
 }
 
 .clock p {
   font-family: "clock-font", monospace;
-  color: rgb(45, 175, 67);
+  color: var(--background);
   font-size: 5vw;
   margin: 0;
 }
@@ -56,24 +54,29 @@
   height: 2vh;
   justify-content: center;
   height: fit-content;
+  border: 0;
 }
 
 .clock .clock-button {
   flex: 1 1 auto;
   padding: 1rem;
   font-family: "clock-font", monospace;
-  background-color: #184d47;
-  color: rgb(45, 175, 67);
   outline: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--text);
+  background: var(--background);
+  box-shadow: 0px 0px 6px 2px rgba(38, 50, 56, 0.7);
+  border: 0;
 }
 
 .clock .clock-button:hover {
-  background: rgb(45, 175, 67);
-  color: #184d47;
+  background: linear-gradient(315deg, #f0ffff, #cadee1);
+  box-shadow: 0px 0px 6px 2px rgba(38, 50, 56, 0.7);
+  color: var(--background);
+  border: 0;
 }
 
 .stopped {

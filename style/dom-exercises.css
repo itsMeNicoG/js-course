@@ -1,6 +1,6 @@
 :root {
-  --text: #ffe227;
-  --background: #121013;
+  --text: #e0f7fa;
+  --background: #263238;
 }
 
 :root,
@@ -18,14 +18,23 @@ body {
   box-sizing: inherit;
 }
 
+body {
+  padding-top: 7vh;
+}
+
 header {
+  display: flex;
   background-color: var(--background);
   padding: 1rem;
   font-family: "Share Tech Mono", monospace;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   color: var(--text);
   margin: 0;
+  height: 7vh;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -35,12 +44,13 @@ h1 {
 
 section h1 {
   font-family: Verdana, sans-serif;
-  margin-bottom: 3vh;
-  margin-top: 6vh;
 }
 
 section {
   display: flex;
   min-height: 100vh;
   padding: 1rem;
+  overflow-y: hidden;
+  justify-content: center;
+  align-items: center;
 }

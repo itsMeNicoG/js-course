@@ -55,7 +55,7 @@ export function changeAlarmStatus($alarmBtn, $audio) {
       $alarmBtn.innerHTML = "Stop Alarm";
     } else {
       $audio.pause();
-      $alarmBtn.innerHTML = "Start Alarm";
+      $alarmBtn.innerHTML = "Play Alarm";
       $audio.currentTime = 0;
     }
   });
