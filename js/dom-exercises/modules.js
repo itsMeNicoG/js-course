@@ -3,6 +3,7 @@ import createClock, { changeAlarmStatus } from "./clock.js";
 import drawCanvas from "./keyboard-events.js";
 import createScrollButton from "./scroll.js";
 import toggleMode from "./toggle.js";
+import countDown from "./countdown.js";
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -23,4 +24,5 @@ d.addEventListener("DOMContentLoaded", (e) => {
   drawCanvas("#drawing-canvas");
   createScrollButton(".scroll");
   toggleMode("toggle-colors");
+  countDown("#start-countdown");
 });

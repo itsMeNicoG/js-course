@@ -10,10 +10,6 @@
   justify-content: center;
 }
 
-#keyboard-events h1 {
-  font-family: "Share Tech Mono", monospace;
-}
-
 #not-desktop {
   display: none;
 }

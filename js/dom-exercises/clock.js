@@ -45,7 +45,6 @@ function changeClockStatus($clock, $clockBtn) {
     $clock.style.display = "block";
     $clock.previousElementSibling.remove();
   }
-  return interval;
 }
 
 export function changeAlarmStatus($alarmBtn, $audio) {

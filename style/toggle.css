@@ -36,22 +36,3 @@ section.light {
 #drawing-canvas.light {
   box-shadow: -20px 20px 60px #c0d0d9, 20px -20px 60px #ffffff;
 }
-
-#clock-section.dark {
-  background-color: #e0f7fa;
-}
-
-.clock.dark {
-  background: linear-gradient(145deg, #cadee1, #f0ffff);
-  box-shadow: 20px 20px 60px #bed2d5, -20px -20px 60px #ffffff;
-}
-
-header.dark {
-  color: #263238;
-  background-color: #e0f7fa;
-}
-
-section h1.dark {
-  color: #263238;
-  background-color: #e0f7fa;
-}

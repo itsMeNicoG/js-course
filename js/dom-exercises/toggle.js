@@ -19,7 +19,6 @@ const goLight = ($button) => {
   document.querySelectorAll("section").forEach((el) => {
     el.classList.toggle("light");
   });
-  document.getElementById("drawing-canvas");
 };
 
 export default function toggleMode(button) {
