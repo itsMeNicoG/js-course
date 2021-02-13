@@ -1,4 +1,3 @@
-const $html = document.documentElement;
 let myStorage = window.localStorage;
 
 const goDark = ($button) => {

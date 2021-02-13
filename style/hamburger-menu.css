@@ -64,7 +64,7 @@
   color: inherit;
   text-transform: none;
   background-color: var(--background);
-  border: 2px solid var(--text);
+  border: 0;
   border-radius: 50%;
   margin: 0;
   right: 1%;
@@ -78,7 +78,7 @@
 }
 
 .hamburger:hover {
-  opacity: 0.7;
+  background-color: rgba(230, 243, 248, 0.075);
 }
 .hamburger.is-active:hover {
   opacity: 0.7;

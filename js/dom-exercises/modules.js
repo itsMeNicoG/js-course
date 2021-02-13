@@ -4,7 +4,6 @@ import drawCanvas from "./keyboard-events.js";
 import createScrollButton from "./scroll.js";
 import toggleMode from "./toggle.js";
 import countDown from "./countdown.js";
-
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -19,8 +18,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
     clockBtn,
     utcClockBtn
   );
-  for (let alarmBtn of document.querySelectorAll(".alarm-status")) {
-    changeAlarmStatus(alarmBtn, document.getElementById("alarm-sound"));
+  for (let alarmBtn of d.querySelectorAll(".alarm-status")) {
+    changeAlarmStatus(alarmBtn, d.getElementById("alarm-sound"));
   }
   drawCanvas("#drawing-canvas");
   createScrollButton(".scroll");

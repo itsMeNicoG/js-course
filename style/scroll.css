@@ -1,6 +1,5 @@
 .scroll {
   cursor: pointer;
-  margin: 0;
   padding: 0;
   left: 2%;
   bottom: 1%;
@@ -11,17 +10,12 @@
   transition: 0.5s ease-out;
   border-radius: 50px;
   background-color: var(--text);
-  border: 2px solid var(--text);
-}
-
-.scroll a {
-  margin: 0;
   border: 0;
-  padding: 0;
+  width: 55px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
-  align-self: center;
 }
 
 .scroll.disabled {
