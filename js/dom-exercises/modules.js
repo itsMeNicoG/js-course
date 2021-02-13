@@ -4,6 +4,7 @@ import drawCanvas from "./keyboard-events.js";
 import createScrollButton from "./scroll.js";
 import toggleMode from "./toggle.js";
 import countDown from "./countdown.js";
+
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
