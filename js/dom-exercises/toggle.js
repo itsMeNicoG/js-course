@@ -9,6 +9,7 @@ const goDark = ($button) => {
   document.querySelectorAll("section").forEach((el) => {
     el.classList.toggle("light");
   });
+  document.querySelector(".hamburger").classList.toggle("light");
   myStorage.setItem("mode", "dark");
 };
 
@@ -21,6 +22,7 @@ const goLight = ($button) => {
   document.querySelectorAll("section").forEach((el) => {
     el.classList.toggle("light");
   });
+  document.querySelector(".hamburger").classList.toggle("light");
   myStorage.setItem("mode", "light");
 };
 

@@ -36,3 +36,9 @@ section.light {
 #drawing-canvas.light {
   box-shadow: -20px 20px 60px #c0d0d9, 20px -20px 60px #ffffff;
 }
+
+.hamburger.light:hover {
+  background-color: var(--background);
+  opacity: 0.9;
+  color: var(--text);
+}
