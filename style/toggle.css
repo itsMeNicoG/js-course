@@ -1,6 +1,7 @@
 #toggle-colors {
   position: fixed;
   cursor: pointer;
+  opacity: 0.9;
   margin: 0;
   right: 1vw;
   bottom: 80px;
@@ -14,7 +15,7 @@
 }
 
 #toggle-colors:hover {
-  opacity: 0.9;
+  opacity: 1;
   font-size: 51px;
 }
 
@@ -37,8 +38,15 @@ section.light {
   box-shadow: -20px 20px 60px #c0d0d9, 20px -20px 60px #ffffff;
 }
 
+.hamburger.light {
+  opacity: 0.9;
+}
+
 .hamburger.light:hover {
   background-color: var(--background);
-  opacity: 0.9;
-  color: var(--text);
+  opacity: 1;
+}
+
+.hamburger.light.is-active:hover {
+  background-color: var(--text);
 }

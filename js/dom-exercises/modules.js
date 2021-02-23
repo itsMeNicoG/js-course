@@ -4,6 +4,7 @@ import drawCanvas from "./keyboard-events.js";
 import createScrollButton from "./scroll.js";
 import toggleMode from "./toggle.js";
 import countDown from "./countdown.js";
+import loadResponsiveSection from "./responsive-js.js";
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -25,4 +26,5 @@ d.addEventListener("DOMContentLoaded", (e) => {
   createScrollButton(".scroll");
   toggleMode("toggle-colors");
   countDown("#start-countdown");
+  loadResponsiveSection("responsive-js");
 });
