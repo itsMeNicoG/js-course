@@ -63,13 +63,13 @@ li a:hover {
   border-radius: 5px;
   align-items: center;
   justify-content: center;
-  padding: 1vw;
+  padding: 3vh;
 }
 
 h2 {
   color: #dddddd;
   font-family: "Bebas Neue", cursive;
-  font-size: 3vw;
+  font-size: 5vh;
   margin: 0;
   text-align: center;
 }
@@ -84,55 +84,4 @@ input {
   border-radius: 5px;
   width: 20%;
   height: 25%;
-}
-
-.cards {
-  margin-top: 1rem;
-  display: flex;
-  border: thin solid var(--dark-color);
-  padding: 1rem;
-  flex-wrap: wrap;
-}
-
-.card-figcaption {
-  padding: 1rem;
-}
-
-.rotate-45 {
-  transform: rotate(45deg);
-}
-
-.rotate-135 {
-  transform: rotate(135deg);
-}
-
-.opacity-80 {
-  opacity: 0.8;
-}
-
-.sepia {
-  filter: sepia(1);
-}
-
-.card {
-  background-color: var(--dark-color);
-  color: var(--yellow-color);
-}
-
-.events-flow div {
-  padding: 4rem;
-  font-size: 2rem;
-  text-align: center;
-}
-
-.one {
-  background-color: #f05454;
-}
-
-.two {
-  background-color: #f7df1e;
-}
-
-.three {
-  background-color: #dddddd;
 }
