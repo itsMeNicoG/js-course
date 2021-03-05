@@ -38,10 +38,10 @@ export default function detectUser(section) {
 
   $section.innerHTML = `
     <div id="user-agent-info">
-      <h2>Hello user, thanks for visiting us from ${
+      <h1>Hello user, thanks for visiting us from ${
         isMobile.any() || isDesktop.any()
-      }.</h2>
-      <h3>It's cool that you're using ${isBrowser.any()}, we also like it!</h3>
+      }.</h1>
+      <h1>It's cool that you're using ${isBrowser.any()}, we also like it!</h1>
     </div>  
   `;
 }
