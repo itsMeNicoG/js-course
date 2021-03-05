@@ -1,0 +1,11 @@
+#user-detection {
+  font-family: "Share Tech Mono", monospace;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3vh;
+}
+
+#user-agent-info {
+  width: 80vw;
+}

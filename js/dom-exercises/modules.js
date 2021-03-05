@@ -5,6 +5,8 @@ import createScrollButton from "./scroll.js";
 import toggleMode from "./toggle.js";
 import countDown from "./countdown.js";
 import loadResponsiveSection from "./responsive-js.js";
+import responsiveTester from "./responsive-tester.js";
+import detectUser from "./user-detection.js";
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -27,4 +29,6 @@ d.addEventListener("DOMContentLoaded", (e) => {
   toggleMode("toggle-colors");
   countDown("#start-countdown");
   loadResponsiveSection("responsive-js");
+  responsiveTester("responsive-form");
+  detectUser("user-detection");
 });

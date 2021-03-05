@@ -50,8 +50,8 @@ const startCount = (e) => {
 const setInitialDate = ($datePicker) => {
   let today = new Date();
   today = `${today.getFullYear()}-${
-    today.getMonth > 10 ? today.getMonth() : `0${today.getMonth() + 1}`
-  }-${today.getDate()}`;
+    today.getMonth() > 10 ? today.getMonth() + 1 : `0${today.getMonth() + 1}`
+  }-${today.getDate() > 10 ? today.getDate() : `0${today.getDate()}`}`;
   $datePicker.value = today;
   $datePicker.min = today;
 };
