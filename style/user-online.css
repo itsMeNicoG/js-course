@@ -1,0 +1,22 @@
+.status-banner {
+  position: fixed;
+  left: 0;
+  margin-top: 70;
+  width: 100vw;
+  height: 5vh;
+  text-align: center;
+  color: white;
+  z-index: 999999;
+  font-family: "Share Tech Mono", monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-banner.online {
+  background-color: green;
+}
+
+.status-banner.offline {
+  background-color: red;
+}

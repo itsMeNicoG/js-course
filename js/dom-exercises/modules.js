@@ -7,6 +7,7 @@ import countDown from "./countdown.js";
 import loadResponsiveSection from "./responsive-js.js";
 import responsiveTester from "./responsive-tester.js";
 import detectUser from "./user-detection.js";
+import isUserOnline from "./user-online.js";
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -32,3 +33,5 @@ d.addEventListener("DOMContentLoaded", (e) => {
   responsiveTester("responsive-form");
   detectUser("user-detection");
 });
+
+isUserOnline();

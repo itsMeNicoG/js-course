@@ -29,13 +29,13 @@ export default function detectUser(section) {
         this.edge() ||
         this.firefox() ||
         this.opera() ||
+        this.chrome() ||
         this.safari() ||
-        this.ie() ||
-        this.chrome()
+        this.ie()
       );
     },
   };
-
+  console.log(navigator.userAgent);
   $section.innerHTML = `
     <div id="user-agent-info">
       <h1>Hello user, thanks for visiting us from ${
