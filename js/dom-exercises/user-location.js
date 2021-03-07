@@ -1,9 +1,11 @@
 export default function getLocation(sectionId) {
   const $section = document.getElementById(sectionId);
-
+  const options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0,
+  };
   const locationCompleted = (position) => {
-    $section.innerHTML = "";
-    console.log(position);
     const $locationMessage = `
     <h1>Looks like this is where you're located:</h1>
     <h1>Latitude: ${position.coords.latitude}  , Longitude: ${position.coords.longitude}  </h1>
@@ -12,8 +14,6 @@ export default function getLocation(sectionId) {
   };
 
   const errorLocating = (error) => {
-    console.log(error);
-    $section.innerHTML = "";
     const $errorMessage = `
     <h1>Unable to geolocate:</h1>
     <h1>${error.message}</h1>
@@ -22,7 +22,11 @@ export default function getLocation(sectionId) {
   };
 
   const locate = () => {
-    navigator.geolocation.getCurrentPosition(locationCompleted, errorLocating);
+    navigator.geolocation.getCurrentPosition(
+      locationCompleted,
+      errorLocating,
+      options
+    );
   };
 
   locate();
