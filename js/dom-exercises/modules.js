@@ -9,6 +9,7 @@ import responsiveTester from "./responsive-tester.js";
 import detectUser from "./user-detection.js";
 import isUserOnline from "./user-online.js";
 import detectCamera from "./detect-camera.js";
+import detectLocation from "./user-location.js";
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -33,7 +34,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
   loadResponsiveSection("responsive-js");
   responsiveTester("responsive-form");
   detectUser("user-detection");
-  detectCamera("camera-stream");
+  detectCamera("camera-detection");
+  detectLocation("user-location");
 });
 
 isUserOnline();

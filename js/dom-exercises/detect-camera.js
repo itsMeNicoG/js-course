@@ -6,10 +6,9 @@ export default function detectCamera(sectionId) {
   };
   let $section = document.getElementById(sectionId);
   async function showError(e) {
-    const $errorMessage = `
-    <div id="camera-error"><h1>Unable to access the camera:</h1>
+    const $errorMessage = `<h1>Unable to access the camera:</h1>
     <h1>${e}</h1>
-    <h1>Make sure you have given the correct permissions and reload</h1></div>`;
+    <h1>Make sure you have given the correct permissions.</h1>`;
     $section.innerHTML = $errorMessage;
   }
   async function show(stream) {
@@ -17,6 +16,7 @@ export default function detectCamera(sectionId) {
     video.srcObject = stream;
     video.addEventListener("loadedmetadata", (e) => {
       video.play();
+      $section.innerHTML = "";
       $section.appendChild(video);
     });
   }
@@ -25,11 +25,11 @@ export default function detectCamera(sectionId) {
       stream = await navigator.mediaDevices.getUserMedia(cameraConstraints);
       show(stream);
     } catch (e) {
-      console.log(e);
       showError(e);
     }
   }
   detect();
-
-  cameraObjec;
+  navigator.permissions.query({ name: "camera" }).then((result) => {
+    result.addEventListener("change", detect);
+  });
 }
