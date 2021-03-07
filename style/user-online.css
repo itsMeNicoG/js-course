@@ -3,7 +3,7 @@
   left: 0;
   margin-top: 70;
   width: 100vw;
-  height: 5vh;
+  height: 7vh;
   text-align: center;
   color: white;
   z-index: 999999;
@@ -11,12 +11,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 1s;
 }
 
 .status-banner.online {
-  background-color: green;
+  background-color: #23c552;
 }
 
 .status-banner.offline {
-  background-color: red;
+  background-color: #f84f31;
 }

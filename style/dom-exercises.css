@@ -52,4 +52,6 @@ section {
   align-items: center;
   background-color: var(--background);
   flex-direction: column;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }

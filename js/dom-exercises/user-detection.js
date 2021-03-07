@@ -1,7 +1,6 @@
 export default function detectUser(section) {
   const $section = document.getElementById(section);
   const userAgent = navigator.userAgent;
-  console.log(navigator);
   const isMobile = {
     android: () => userAgent.match(/android/i),
     ios: () => userAgent.match(/iphone|ipad|ipod/i),
@@ -35,7 +34,6 @@ export default function detectUser(section) {
       );
     },
   };
-  console.log(navigator.userAgent);
   $section.innerHTML = `
     <div id="user-agent-info">
       <h1>Hello user, thanks for visiting us from ${

@@ -1,0 +1,9 @@
+#camera-detection video {
+  border-radius: 5px;
+  padding: 0;
+  margin: 0;
+}
+
+#camera-detection h1 {
+  margin: 3vh;
+}
