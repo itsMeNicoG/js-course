@@ -20,14 +20,15 @@ export default async function createCards(section, search) {
       for (let img of tempImages) {
         fragment.appendChild(createCard(img, $section));
       }
-      $section.appendChild(fragment);
     } else {
       let notFoundMessage = document.createElement("h1");
       notFoundMessage.appendChild(
         document.createTextNode(`No results for "${filter}"`)
       );
-      $search.insertAdjacentElement("afterend", notFoundMessage);
+      fragment.appendChild(notFoundMessage);
     }
+
+    $section.appendChild(fragment);
   }
 
   function createCard(image) {

@@ -6,6 +6,10 @@
   padding: 10px;
 }
 
+#cards h1 {
+  grid-column: 1/-1;
+}
+
 .card {
   background-color: #212121;
   filter: opacity(95%);
@@ -36,6 +40,7 @@
   border: 1px solid var(--background);
   padding: 10px;
   opacity: 0.8;
+  margin-top: 8vh;
 }
 
 @media screen and (max-width: 800px) {
