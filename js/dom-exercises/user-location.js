@@ -8,7 +8,8 @@ export default function getLocation(sectionId) {
   const locationCompleted = (position) => {
     const $locationMessage = `
     <h1>Looks like this is where you're located:</h1>
-    <h1>Latitude: ${position.coords.latitude}  , Longitude: ${position.coords.longitude}  </h1>
+    <h1>Latitude: ${position.coords.latitude}</h1>
+    <h1>Longitude: ${position.coords.longitude} </h1>
     <a target="_blank" href="https://www.google.com/maps/@${position.coords.latitude},${position.coords.longitude},19z"> VIEW MAP </a>`;
     $section.innerHTML = $locationMessage;
   };

@@ -33,6 +33,7 @@ header {
   align-items: center;
   justify-content: center;
   padding-top: 1rem;
+  z-index: 998;
 }
 
 h1 {

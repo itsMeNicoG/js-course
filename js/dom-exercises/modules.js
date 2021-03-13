@@ -10,6 +10,7 @@ import detectUser from "./user-detection.js";
 import isUserOnline from "./user-online.js";
 import detectCamera from "./detect-camera.js";
 import detectLocation from "./user-location.js";
+import filterImages from "./search.js";
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -36,6 +37,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   detectUser("user-detection");
   detectCamera("camera-detection");
   detectLocation("user-location");
+  filterImages("cards", "search-bar");
 });
 
 isUserOnline();
