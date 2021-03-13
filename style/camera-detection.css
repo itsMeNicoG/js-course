@@ -1,4 +1,5 @@
 #camera-detection video {
+  max-width: 90vw;
   border-radius: 5px;
   padding: 0;
   margin: 0;
