@@ -11,6 +11,7 @@ import isUserOnline from "./user-online.js";
 import detectCamera from "./detect-camera.js";
 import detectLocation from "./user-location.js";
 import filterImages from "./search.js";
+import pickWinner from "./raffle.js";
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -41,3 +42,4 @@ d.addEventListener("DOMContentLoaded", (e) => {
 });
 
 isUserOnline();
+pickWinner("pick-winner", "cards");

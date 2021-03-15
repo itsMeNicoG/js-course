@@ -1,9 +1,12 @@
 export default async function createCards(section, search) {
-  const url = `https://api.nasa.gov/planetary/apod?count=14&api_key=DEMO_KEY`;
+  const url = `https://api.nasa.gov/planetary/apod?count=15&api_key=ynIukoMD6biv8izokR4LWjplypaKoJWIj3nBAPmV`;
   const $section = document.getElementById(section);
   const $search = document.getElementById(search);
-  const images = await (await fetch(url)).json();
+  const images = (await (await fetch(url)).json()).filter(
+    (img) => img.media_type === "image"
+  );
   let fragment = document.createDocumentFragment();
+  console.log(images);
   for (let img of images) {
     fragment.appendChild(createCard(img, $section));
   }
@@ -19,6 +22,7 @@ export default async function createCards(section, search) {
     if (tempImages.length > 0) {
       for (let img of tempImages) {
         fragment.appendChild(createCard(img, $section));
+        console.log(fragment);
       }
     } else {
       let notFoundMessage = document.createElement("h1");
@@ -34,6 +38,7 @@ export default async function createCards(section, search) {
   function createCard(image) {
     let $container = document.createElement("div");
     let $img = document.createElement("img");
+
     let explanation = document.createElement("p");
     explanation.appendChild(
       document.createTextNode(image.explanation.split(".")[0] + ".")
@@ -44,7 +49,8 @@ export default async function createCards(section, search) {
     $container.appendChild(explanation);
     return $container;
   }
-
-  $search.addEventListener("keyup", (e) => searchImages($search.value));
-  $search.addEventListener("search", (e) => searchImages($search.value));
+  if ($search) {
+    $search.addEventListener("keyup", (e) => searchImages($search.value));
+    $search.addEventListener("search", (e) => searchImages($search.value));
+  }
 }
