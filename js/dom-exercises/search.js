@@ -6,7 +6,6 @@ export default async function createCards(section, search) {
     (img) => img.media_type === "image"
   );
   let fragment = document.createDocumentFragment();
-  console.log(images);
   for (let img of images) {
     fragment.appendChild(createCard(img, $section));
   }

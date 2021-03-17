@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="style/user-location.css" />
     <link rel="stylesheet" href="style/search.css" />
     <link rel="stylesheet" href="style/raffle.css" />
+    <link rel="stylesheet" href="style/responsive-slider.css" />
   </head>
   <body>
     <audio id="alarm-sound">
@@ -44,6 +45,7 @@
           <li><a href="#camera-detection">Camera Detection</a></li>
           <li><a href="#user-location">Geolocation</a></li>
           <li><a href="#search">Search</a></li>
+          <li><a href="#slider-section">Responsive Slider</a></li>
         </ul>
       </nav>
     </header>
@@ -104,6 +106,28 @@
   
         </div>
       <button type="button" id="pick-winner">Pick Winner</button>
+      </section>
+      <section id="slider-section">
+        <div class="slider">
+          <div class="slider-controls">
+            <button class="slider-control" id="prev">&laquo;</button>
+            <button class="slider-control" id="next">&raquo;</button>
+          </div>
+          <div class="slides">
+            <div class="slide active">
+              <img src="https://placeimg.com/800/800/animals" alt="animals image">
+             </div>
+            <div class="slide">
+              <img src="https://placeimg.com/400/400/tech" alt="tech image">
+            </div>
+            <div class="slide">
+              <img src="https://placeimg.com/400/400/arch" alt="architecture image">
+            </div>
+            <div class="slide">
+              <img src="https://placeimg.com/400/400/nature" alt="nature image">
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <script src="js/dom-exercises/modules.js" type="module"></script>

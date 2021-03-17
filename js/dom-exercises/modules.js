@@ -1,17 +1,18 @@
-import createHamburgerMenu from "./hamburger.js";
 import createClock, { changeAlarmStatus } from "./clock.js";
-import drawCanvas from "./keyboard-events.js";
-import createScrollButton from "./scroll.js";
-import toggleMode from "./toggle.js";
 import countDown from "./countdown.js";
+import detectCamera from "./detect-camera.js";
+import createHamburgerMenu from "./hamburger.js";
+import drawCanvas from "./keyboard-events.js";
+import pickWinner from "./raffle.js";
 import loadResponsiveSection from "./responsive-js.js";
 import responsiveTester from "./responsive-tester.js";
-import detectUser from "./user-detection.js";
-import isUserOnline from "./user-online.js";
-import detectCamera from "./detect-camera.js";
-import detectLocation from "./user-location.js";
+import createScrollButton from "./scroll.js";
 import filterImages from "./search.js";
-import pickWinner from "./raffle.js";
+import toggleMode from "./toggle.js";
+import detectUser from "./user-detection.js";
+import detectLocation from "./user-location.js";
+import isUserOnline from "./user-online.js";
+import imageSlider from "./responsive_slider.js";
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -39,6 +40,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   detectCamera("camera-detection");
   detectLocation("user-location");
   filterImages("cards", "search-bar");
+  imageSlider(".slide", "prev", "next");
 });
 
 isUserOnline();
