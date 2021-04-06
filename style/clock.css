@@ -3,7 +3,7 @@
   src: url(fonts/clock.ttf);
 }
 
-#clock-section {
+#clocks {
   display: flex;
   flex-direction: column;
   align-items: center;

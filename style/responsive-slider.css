@@ -5,8 +5,8 @@
 
 .slider {
   position: relative;
-  min-width: 40vw;
-  max-width: 80vw;
+  width: 80vw;
+  max-width: 600px;
   margin: 1rem auto;
   text-align: center;
   border-radius: 5px;
@@ -27,13 +27,13 @@
 }
 
 #prev {
-  left: -50px;
-  width: 50px;
+  left: -30px;
+  width: 30px;
 }
 
 #next {
-  right: -50px;
-  width: 50px;
+  right: -30px;
+  width: 30px;
 }
 
 #prev:hover,

@@ -8,7 +8,7 @@ export default function createSlider(slides, previous, next) {
     $active.classList.remove("active");
     console.log($active);
     currentSlide += change;
-    if (currentSlide <= 0) {
+    if (currentSlide < 0) {
       currentSlide = $slides.length - 1;
     } else if (currentSlide >= $slides.length) {
       currentSlide = 0;
