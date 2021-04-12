@@ -14,6 +14,7 @@ import detectLocation from "./user-location.js";
 import isUserOnline from "./user-online.js";
 import imageSlider from "./responsive_slider.js";
 import scrollSpy from "./scroll_spy.js";
+import handleSmartVideo from "./smart_video.js";
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -43,6 +44,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   filterImages("cards", "search-bar");
   imageSlider(".slide", "prev", "next");
   scrollSpy("section", "hamburger-menu");
+  handleSmartVideo("smart-video");
 });
 
 isUserOnline();

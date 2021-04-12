@@ -30,7 +30,6 @@ export default function createScrollSpy(sections, nav) {
               activeElement = element;
             }
           });
-          console.log("active element: ", activeElement);
           activeElement.childNodes[0].classList.add("active");
         }
       }
