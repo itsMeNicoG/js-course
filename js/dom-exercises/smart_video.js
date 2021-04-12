@@ -6,7 +6,7 @@ export default function handleSmartVideo(tag) {
     });
   };
   const observer = new IntersectionObserver(makeSmart, {
-    treshold: [0.5, 0.75],
+    threshold: 1.0,
   });
   $videos.forEach((video) => observer.observe(video));
 }
