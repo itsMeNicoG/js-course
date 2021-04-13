@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="style/responsive-slider.css" />
     <link rel="stylesheet" href="style/scroll-spy.css" />
     <link rel="stylesheet" href="style/smart-video.css" />
+    <link rel="stylesheet" href="style/contact-form.css" />
   </head>
   <body>
     <audio id="alarm-sound">
@@ -120,7 +121,28 @@
         </div>
       </section>
       <section id="smart-video">
-        <video controls loop src="img/smart-video.mp4" smart-video></video>
+        <video loop muted src="img/smart-video.mp4" smart-video></video>
+      </section>
+      <section id="contact-form">
+        <form class="contact-form">
+          <legend>Send us a message</legend>
+          <input 
+            type="text" 
+            name="name" 
+            required placeholder="What's your name" 
+            title="The name can only contain letters and white spaces" 
+            pattern="^[a-zA-Züáéíóú]+ [a-zA-Züáéíóú]+( [a-zA-Züáéíóú]+)*$">
+          <input type="email" name="email" required placeholder="What's your email address" title="Incorrect email" pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
+          <input type="text" name="subject" required placeholder="Subject" title="Subject is required" maxlength="50">
+          <textarea name="message" placeholder="Let us know your thoughts!" cols="50" rows="5" required maxlength="50"></textarea>
+          <input type="submit" value="Send">
+          <div class="contact-form-loader none">
+            <img src="img/loader.svg" alt="Loading...">
+          </div>
+          <div class="contact-form-response none">
+            <p>Your message has been sent, thank you!</p>
+          </div>
+        </form>
       </section>
     </main>
     <script src="js/dom-exercises/modules.js" type="module"></script>
