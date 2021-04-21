@@ -3,8 +3,10 @@ export default function readText(formId) {
   const $voiceOptions = $form.querySelector("select");
   const $textInput = $form.querySelector("textarea");
   const synth = window.speechSynthesis;
+  console.log("Speech", synth);
   let voices;
   synth.addEventListener("voiceschanged", (e) => {
+    alert("Loading voices...");
     voices = speechSynthesis.getVoices();
     voices.forEach((voice) => {
       let voiceOption = document.createElement("option");
