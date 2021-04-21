@@ -58,6 +58,7 @@
   background-color: var(--error-color);
   color: #fff;
   transition: all 800ms ease;
+  text-align: center;
 }
 
 .contact-form-error.is-active {

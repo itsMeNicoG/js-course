@@ -124,17 +124,17 @@
         <video loop muted src="img/smart-video.mp4" smart-video></video>
       </section>
       <section id="contact-form">
-        <form class="contact-form">
+        <form class="contact-form" action="https://formsubmit.co/a2482886ab7c66eb4b33770b8e02062c" method="post">
           <legend>Send us a message</legend>
           <input 
             type="text" 
             name="name" 
-            required placeholder="What's your name" 
+            required placeholder="What's your full name" 
             title="The name can only contain letters and white spaces" 
             pattern="^[a-zA-Züáéíóú]+ [a-zA-Züáéíóú]+( [a-zA-Züáéíóú]+)*$">
           <input type="email" name="email" required placeholder="What's your email address" title="Incorrect email" pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
           <input type="text" name="subject" required placeholder="Subject" title="Subject is required" maxlength="50">
-          <textarea name="message" placeholder="Let us know your thoughts!" cols="50" rows="5" required maxlength="50"></textarea>
+          <textarea name="message" placeholder="Let us know your thoughts!" cols="50" rows="5" required title="Message can't be empty or longer than 255 characters" data-pattern="^.{1,255}$"></textarea>
           <input type="submit" value="Send">
           <div class="contact-form-loader none">
             <img src="img/loader.svg" alt="Loading...">
@@ -142,6 +142,14 @@
           <div class="contact-form-response none">
             <p>Your message has been sent, thank you!</p>
           </div>
+        </form>
+      </section>
+      <section id="text-reader">
+        <form class="contact-form" id="reader">
+          <legend>Text reader</legend>
+          <select name="voices" id="voices"></select>
+          <textarea name="text" placeholder="Write your text here" cols="50" rows="5" required title="Text to read can't be empty or longer than 255 characters" data-pattern="^.{1,255}$"></textarea>
+          <input type="submit" value="Speak">
         </form>
       </section>
     </main>

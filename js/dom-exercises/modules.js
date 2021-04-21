@@ -15,6 +15,8 @@ import isUserOnline from "./user-online.js";
 import imageSlider from "./responsive_slider.js";
 import scrollSpy from "./scroll_spy.js";
 import handleSmartVideo from "./smart_video.js";
+import validateForm from "./validate_form.js";
+import readText from "./text_reader.js";
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -45,6 +47,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
   imageSlider(".slide", "prev", "next");
   scrollSpy("section", "hamburger-menu");
   handleSmartVideo("smart-video");
+  validateForm();
+  readText("reader");
 });
 
 isUserOnline();
