@@ -6,7 +6,6 @@ export default function readText(formId) {
   console.log("Speech", synth);
   let voices;
   synth.addEventListener("voiceschanged", (e) => {
-    alert("Loading voices...");
     voices = speechSynthesis.getVoices();
     voices.forEach((voice) => {
       let voiceOption = document.createElement("option");
