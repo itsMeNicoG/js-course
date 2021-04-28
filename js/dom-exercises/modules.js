@@ -17,6 +17,13 @@ import scrollSpy from "./scroll_spy.js";
 import handleSmartVideo from "./smart_video.js";
 import validateForm from "./validate_form.js";
 import readText from "./text_reader.js";
+import {
+  xhrRequest,
+  fetchRequest,
+  fetchAsyncRequest,
+  axiosRequest,
+  axiosAsyncRequest,
+} from "./ajax.js";
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -49,6 +56,11 @@ d.addEventListener("DOMContentLoaded", (e) => {
   handleSmartVideo("smart-video");
   validateForm();
   readText("reader");
+  xhrRequest();
+  fetchRequest();
+  fetchAsyncRequest();
+  axiosRequest();
+  axiosAsyncRequest();
 });
 
 isUserOnline();
