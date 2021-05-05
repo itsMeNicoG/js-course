@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="style/scroll-spy.css" />
     <link rel="stylesheet" href="style/smart-video.css" />
     <link rel="stylesheet" href="style/contact-form.css" />
+    <link rel="stylesheet" href="style/crud-table.css" />
   </head>
   <body>
     <audio id="alarm-sound">
@@ -152,7 +153,7 @@
           <input type="submit" value="Speak">
         </form>
       </section>
-      <section id="ajax">
+      <!--<section id="ajax">
         <h1>XMLHttpRequest</h1>
         <ul id="xhr"></ul>
         <h1>Fetch</h1>
@@ -163,9 +164,44 @@
         <ul id="axios"></ul>
         <h1>Axios with Async Await</h1>
         <ul id="axios-async"></ul>
+      </section>!-->
+      <section id="crud">
+        <form class="contact-form crud-form" id="add-user">
+          <legend class="crud-title">Add user</legend>
+          <input type="text" name="name" required placeholder="Enter your name">
+          <input type="text" name="username" required placeholder="Enter your username">
+          <input type="email" name="email" required placeholder="Enter your email" title="Incorrect email" pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
+          <input type="submit" value="Add" name="submit">
+          <button type="button" name="edit" class="not-visible">Edit</button>
+        </form>
+        <h1 id="crud-list">Current users</h1>
+        <table class="crud-table" id="crud-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
       </section>
+      <template id="crud-template">
+        <tr>
+          <td class="name"></td>
+          <td class="username"></td>
+          <td class="email"></td>
+          <td>
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+          </td>
+        </tr>
+      </template>
     </main>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/dom-exercises/modules.js" type="module"></script>
+    <script src="js/dom-exercises/crud.js"></script>
   </body>
 </html>

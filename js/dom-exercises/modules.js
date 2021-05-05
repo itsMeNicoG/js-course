@@ -56,11 +56,11 @@ d.addEventListener("DOMContentLoaded", (e) => {
   handleSmartVideo("smart-video");
   validateForm();
   readText("reader");
-  xhrRequest();
+  /* xhrRequest();
   fetchRequest();
   fetchAsyncRequest();
   axiosRequest();
-  axiosAsyncRequest();
+  axiosAsyncRequest(); */
 });
 
 isUserOnline();
