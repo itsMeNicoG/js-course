@@ -19,6 +19,8 @@ nav * {
 
 li {
   display: inline;
+  width: inherit;
+  height: inherit;
 }
 
 ul {
@@ -42,4 +44,19 @@ button {
   cursor: pointer;
   width: inherit;
   padding: 0 2vw;
+}
+
+button:hover {
+  color: #00e676;
+  border-bottom: 2px solid #00e676;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 2vh;
 }
