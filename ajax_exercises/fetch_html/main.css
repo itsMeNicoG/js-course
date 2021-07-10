@@ -46,7 +46,8 @@ button {
   padding: 0 2vw;
 }
 
-button:hover {
+button:hover,
+button:active {
   color: #00e676;
   border-bottom: 2px solid #00e676;
 }

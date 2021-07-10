@@ -36,5 +36,18 @@ export default function validateForm() {
       $response.classList.remove("none");
       setTimeout(() => $response.classList.add("none"), 2000);
     }, 2000);
+    fetch("https://formsubmit.co/ajax/nicolasgongora28@gmail.com", {
+      method: "POST",
+      body: new FormData(e.target),
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        console.log(json);
+        $loader.classList.add("none");
+        $form.reset();
+        $response.classList.remove("none");
+        $response.innerText = json.message;
+        setTimeout(() => $response.classList.add("none"), 2000);
+      });
   });
 }

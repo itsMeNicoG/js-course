@@ -31,7 +31,6 @@ const startCount = (e) => {
   $tryAgainButton.innerText = "TRY AGAIN";
   $tryAgainButton.style.setProperty("margin-top", "5vh");
   $startButton.insertAdjacentElement("afterend", $tryAgainButton);
-  console.log($tryAgainButton);
   showMessage(getRemainingTime(targetDate), $countdownText);
   let countInterval = setInterval(
     () => showMessage(getRemainingTime(targetDate), $countdownText),
@@ -51,7 +50,7 @@ const setInitialDate = ($datePicker) => {
   let today = new Date();
   today = `${today.getFullYear()}-${
     today.getMonth() > 10 ? today.getMonth() + 1 : `0${today.getMonth() + 1}`
-  }-${today.getDate() > 10 ? today.getDate() : `0${today.getDate()}`}`;
+  }-${today.getDate() >= 10 ? today.getDate() : `0${today.getDate()}`}`;
   $datePicker.value = today;
   $datePicker.min = today;
 };

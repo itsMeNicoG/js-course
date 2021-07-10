@@ -19,7 +19,6 @@ const showUsers = () =>
         $userRow.querySelector(".delete").onclick = (e) => removeUser(user.id);
         $userRow.querySelector(".edit").onclick = (e) => enableEdit(user.id);
         $fragment.appendChild($userRow);
-        console.log(user.id);
       });
       $table.querySelector("tbody").appendChild($fragment);
     });
